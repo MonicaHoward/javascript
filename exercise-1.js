@@ -147,8 +147,8 @@
             console.log(newArr);
         }
 
-firstAndThird(numbers)
-        /************************************************************************************/
+        firstAndThird(numbers)
+        /* PROBLEM #10 - FOOD ARRAY ***********************************************************************************/
         const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
         //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
 
@@ -159,11 +159,7 @@ firstAndThird(numbers)
         // Using both the foodArray and the adjectiveArray, write "for" loop that console.log()'s a sentence for each corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  i.e. "Potatoes are salty", "Lemon is sour".
 
         let arraySentence = (foodArray, adjectiveArray) => {
-            for (let i = 0; i < foodArray.length; i++){
-                for (let i = 0; i < adjectiveArray.length; i++){
-                    
-                }
-            }
+            foo
         }
 
 
@@ -648,14 +644,10 @@ firstAndThird(numbers)
         //Add an example of the 5 primary JavaScript data types to the given mapObj.  The key is an example data type, and the value is the name of the data type.  An object data type has already been set as the 1st key / val pair.
 
         const mapObj = new Map();
-        mapObj.set(
-        
-            "object", {car: "Mazda"},
-            "number", 5,
-            "boolean", true,
-            );
+        mapObj.set("object", {company : "TEKsystems"});
+        // console.log(mapObj.set.has({company : "TEKsystems"}))
 
-        console.log(mapObj.has(mapObj.bar));
+        console.log(mapObj.has("object"))
 
         //The above console.log() statmeent returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code `mapObj.set()`, so the code : `mapObj.has() returns true.  The goal is to successfully check and see if {company : "TEKsystems"} exists in the mapObj.
 
