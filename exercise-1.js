@@ -55,7 +55,7 @@
 
 
 
-        /************************************************************************************/
+        /* PROBLEM #4 - CAN VOTE?***********************************************************************************/
         // Write a function to determine if someone is old enough to vote.  The function should return a boolean of true or false.
 
         //your code...
