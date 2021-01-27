@@ -28,25 +28,27 @@
 
 
 
-        /************************************************************************************/
+        /* PROBLEM #2 - FAHRENHEITH TO CELSIUS ***********************************************************************************/
         //Write a function that converts the current temperature from Fahrenheit to Celsius. 
 
       
         function farenheitCelsius(tempFarh) {
             let tempCel = (tempFarh - 30) * (5/9) ;
             console.log("Celsius temp is: ", tempCel)
+            return tempCel
         }
 
         farenheitCelsius(100)
 
 
-        /**********************************************************************************************************************/
+        /* PROBLEM # 3 - CELSIUS TO FAHRENHEIT*********************************************************************************************************************/
         //Write a function that converts the Celsius temperature back to Fahrenheit. 
 
         //your code...
         function celsiusFarenheit(tempCel) {
             let tempFarh = (tempCel * 9/5) + 32
             console.log("Farhenheit temp is ", tempFarh)
+            return tempFarh
         }
 
         celsiusFarenheit(100)
@@ -355,7 +357,7 @@ firstAndThird(numbers)
             }
             console.log(sum);
             
-            let sum;
+            // let sum;
             // 3.
             while(i < nums.length) {
                 doubled.push(nums[i]*2);
