@@ -1,28 +1,30 @@
 // ***For all the exercises, be sure to log the output of the function to the console.***
 
-        /************************************************************************************/
+        /*PROBLEM #1 - TEKCAMP ***********************************************************************************/
         // Write a JavaScript function that iterates the integers from 1 to 100. For multiples of 3 print "TEK" instead of the number and for multiples of 5, print "camp." For numbers that are multiples of both 3 and 5, print "TEKcamp."
 
         // storing begining int and ending int as seperate variables in case I want to change the range later
-        let lowInt = 1;
-        let highInt = 100
+        let lowRange = 1;
+        let highRange = 100;
+        // storing numbers in variables for optimum dynamic-ness
+        let num1 = 3;
+        let num2 = 5;
         
-        function tekCamp(lowRange, highRange) {
+        // passing in default values
+        function tekCamp(lowRange=1, highRange=100, num1, num2) {
             for (var i = lowRange; i < highRange; i++) {
-                if(i % (3 * 15) === 0){
+                if(i % (num1 * num2) === 0){
                     console.log(i, " TEKcamp")
                 }
-                else if (i % 3 === 0) {
+                else if (i % num1 === 0) {
                     console.log(i, " TEK")
                 }
-                else if (i % 5 === 0 ) {
+                else if (i % num2 === 0 ) {
                     console.log(i, " camp")
-                }
-                
-            }
-            
+                } 
+            }       
         }
-        tekCamp(lowInt, highInt);
+        tekCamp(lowRange, highRange, num1, num2);
 
 
 
@@ -38,7 +40,7 @@
         farenheitCelsius(100)
 
 
-        /************************************************************************************/
+        /**********************************************************************************************************************/
         //Write a function that converts the Celsius temperature back to Fahrenheit. 
 
         //your code...
@@ -346,20 +348,20 @@ firstAndThird(numbers)
             if(year > 2000 && year < 2100) {
                 console.log("welcome to the 21st century");
             }
-            
+            let century;
             // 2.
             for(let i=0; i<nums.length; i++) {
                 sum += nums[i];
             }
             console.log(sum);
             
-            
+            let sum;
             // 3.
             while(i < nums.length) {
                 doubled.push(nums[i]*2);
                 i++;
             }
-            
+            let doubled;
             console.log(doubled);
         }
 
@@ -419,12 +421,31 @@ firstAndThird(numbers)
 
         */
 
-        function chessCalc(pieces) {
+        // function chessCalc(pieces) {
             
 
         
+        // }
+        let chessPieces = {
+            PAWN: 1,
+            ROOK: 5,
+            BISHOP: 3,
+            KNIGHT: 3,
+            QUEEN: 9, 
         }
-
+        function chessCalc(pieces) {
+            let total = 0
+            for(let i of pieces){
+                for(let j in chessPieces){
+                    let i = i.toUpperCase()
+                    if(i == j){
+                        total += chessPieces[i]
+                    } 
+                }
+            }
+            return total
+        }
+        chessCalc(["queen", "pawn", "bishop"])
 
 
 
