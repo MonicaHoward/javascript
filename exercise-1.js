@@ -116,7 +116,7 @@
 
         myCar('Ford', 'Edge', '2012', 'black')
 
-        /************************************************************************************/
+        /* PROBLEM #8 - even or odd ***********************************************************************************/
         // Write a function that accepts a list of numbers.  The function should identify each number as being even or odd.  The function should output a set of key value pairs, with the key being the number, and the value being the string "even" or "odd".
 
         //example : [10,23,3,4] => function() => {10 : 'even', 23 : 'odd', 3 : 'odd', 4 : 'even'}
@@ -125,13 +125,13 @@
 
 
         let evenOrOdd = (arr) => {
-            arr.forEach(num => console.log({num: num % 2 === 0 ? 'even' : 'odd'}))
+            arr.forEach(num => console.log({[num]: num % 2 === 0 ? 'even' : 'odd'}))
         }
 
 
         evenOrOdd([10, 23, 3, 4])
 
-        /************************************************************************************/
+        /* PROBLEM #9 - INDEX @ MULTIPLES OF 3***********************************************************************************/
         const numbers = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
         // Write a "for" loop that console.log()'s the first value in the  array, and every 3rd number, i.e. 0, 3, 6, 9: the zeroth, third, sixth, and ninth values.
 
