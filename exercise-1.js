@@ -70,7 +70,7 @@
 
 
 
-        /************************************************************************************/
+        /* PROBLEM #5 - STRING TO ARRAY ***********************************************************************************/
         // Write a function that converts a string to an array. It should return an array.  
 
         //your code...
@@ -91,7 +91,7 @@
 
 
 
-        /************************************************************************************/
+        /* PROBLEM #6 - REVERSE PHONE NUMBER ***********************************************************************************/
         // Write a function that reverses your telephone number.  It should return the reversed telephone number.
 
         //your code...
@@ -104,7 +104,7 @@
 
 
 
-        /************************************************************************************/
+        /* PROBLEM #7 - CAR OBJECT ***********************************************************************************/
         // Write a function that returns a car object using some given info about your car. Required inputs are the make, model, year, and color.
 
         //your code...
