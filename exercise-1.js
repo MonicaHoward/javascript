@@ -363,7 +363,7 @@ firstAndThird(numbers)
                 doubled.push(nums[i]*2);
                 i++;
             }
-            let doubled;
+            // let doubled;
             console.log(doubled);
         }
 
