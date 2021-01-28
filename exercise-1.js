@@ -152,16 +152,25 @@
         const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
         //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
 
-       let school =  foodArray[foodArray.length - 1].program;
-       console.log("The value of the new variable called school is ", school);
 
         const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
+
+       let school =  foodArray[foodArray.length - 1].program;
+       console.log("The value of the new variable called school is ", school);
+       console.log(`${school} is ${adjectiveArray[adjectiveArray.length - 1]}`);
         // Using both the foodArray and the adjectiveArray, write "for" loop that console.log()'s a sentence for each corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  i.e. "Potatoes are salty", "Lemon is sour".
 
-        let arraySentence = (foodArray, adjectiveArray) => {
-            foo
-        }
-
+        let arraySentence = (food=foodArray, adj=adjectiveArray) => {
+            food.forEach((item, i) => {
+                if (item.endsWith('s')) {
+                    console.log(`${item } are ${adjectiveArray[i] }`)
+                }
+                else {
+                    console.log(`${item } is ${adjectiveArray[i] }`)
+                }         
+            }          
+        )}
+        arraySentence(foodArray, adjectiveArray)
 
         /************************************************************* */
         // Refactor the for() loop to be a while loop.
@@ -576,8 +585,8 @@
         /************************** */  
         // Sort the developers by name
 
-        //your code here
-        let sortByName = devs.sort((a, b) => a.name - b.name)
+        //Not sure how the names should be sorted so I sorted them in the reverse order to what they originally were. 
+        let sortByName = devs.sort((a, b) => a.name - b.name ? 1 : -1)
 
         let sortedByName =sortByName.forEach((e) => e);
     
