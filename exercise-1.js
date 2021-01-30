@@ -189,9 +189,6 @@
 
         //your code...
 
-
-
-
         /************************************************************* */
         //Multiply the sum of 30 added to two by 20.  Divide the product by 10 raised to the power of 2
         //use javascript to compute the value of the above statement. Each individual operation needs to be a function expression. run all the functions after defining them, and print the answer to the console.
@@ -352,15 +349,17 @@
 
 
             // 1.
-            if(year > 2000 && year < 2100) {
-                console.log("welcome to the 21st century");
-            }
-            let century;
+            // if(year > 2000 && year < 2100) {
+            //     console.log("welcome to the 21st century");
+            // }
+            // let century;
             // 2.
-            for(let i=0; i<nums.length; i++) {
-                sum += nums[i];
-            }
-            console.log(sum);
+
+
+            // 
+            
+            sum = nums.reduce((acc, x) => {acc += val})
+            console.log(sum)
             
             // let sum;
             // 3.
@@ -433,6 +432,28 @@
 
         
         // }
+        // let chessPieces = {
+        //     PAWN: 1,
+        //     ROOK: 5,
+        //     BISHOP: 3,
+        //     KNIGHT: 3,
+        //     QUEEN: 9, 
+        // }
+        // function chessCalc(pieces, chessPieces) {
+        //     let total = 0
+        //     for(let i of pieces){
+        //         for(let j in chessPieces){
+        //             let i;
+        //             i = i.toUpperCase()
+        //             if(i == j){
+        //                 total += chessPieces[i]
+        //             } 
+        //         }
+        //     }
+        //     return total
+        // }
+        // chessCalc(["queen", "pawn", "bishop"], chessPieces)
+
         let chessPieces = {
             PAWN: 1,
             ROOK: 5,
@@ -440,19 +461,14 @@
             KNIGHT: 3,
             QUEEN: 9, 
         }
-        function chessCalc(pieces) {
-            let total = 0
-            for(let i of pieces){
-                for(let j in chessPieces){
-                    let i = i.toUpperCase()
-                    if(i == j){
-                        total += chessPieces[i]
-                    } 
-                }
+        function chessCalc(pieces, chessPieces) {
+            let val = 0
+            for (let i = 0; i < pieces.length; i++) {
+                val += chessPieces[`${pieces[i]}`];
             }
-            return total
+            console.log(val)
         }
-        chessCalc(["queen", "pawn", "bishop"])
+        chessCalc(["QUEEN", "PAWN", "BISHOP"], chessPieces)
 
 
 
@@ -541,6 +557,7 @@
             },
         ];
 
+        
         /************************** */  
         // Find all devs older than 24
 
@@ -579,7 +596,7 @@
         // lowercase the genders of every dev
 
         //your code here...
-        let lowerCase = devs.filter(l => l.gender.toLowerCase())
+        let lowerCase = devs.filter(l => l.genderl.gender.toLowerCase())
 
         console.log("All genders to Lowercase ", lowerCase)
         /************************** */  
@@ -614,7 +631,14 @@
         Dr. Patel is not a developer.
         */
 
-        //your code here
+       devs.forEach( dev => {
+        let sentence = dev.name;
+        if (dev['tech_stack']) {
+            sentence += ' specializes in ' + dev['tech_stack'].join(', ') + '.'
+        }
+        else sentence += ' is not a developer.'
+        console.log(sentence);
+    });
 
 
         /************************************************************* */
